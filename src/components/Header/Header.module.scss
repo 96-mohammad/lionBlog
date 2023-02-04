@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  background-color: #CFD8DC;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+
+    @media(max-width: 1100px) {
+      gap: 0;
+      flex: 3;
+    }
+  }
+
+  &_photo {
+    flex: 5;
+
+    img {
+      border-radius: 50%;
+      max-width: 60px;
+      max-height: 60px;
+      object-fit: cover;
+    }
+  }
+}

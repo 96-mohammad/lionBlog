@@ -1,0 +1,103 @@
+:root {
+  --drop-shadow: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  @media(max-width: 470px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  padding: 1.2rem 2.6rem;
+  border-radius: 1.2rem;
+  color: #fff;
+  background-color: #303030;
+  border: none;
+  font-size: 1.6rem;
+  transition: 0.5s ease-in-out all;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: rgba(48, 48, 48, 0.7);
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+textarea {
+  border: 1px solid #666666;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 140rem;
+  padding: 0 3rem;
+}
+
+.divider {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  display: block;
+}
+
+.router-link {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin: 1.2rem 0;
+  border-bottom: 1px solid transparent;
+  transition: 0.5s ease all;
+
+  &:hover {
+    border-color: #303030;
+  }
+}
+
+.date {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  color: #666;
+}
+
+.error {
+  text-align: left;
+  font-size: 1.4rem;
+  color: red;
+  margin: 1rem 0;
+}

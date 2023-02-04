@@ -1,0 +1,141 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+
+  &_heading {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      flex: 7;
+
+      @media(max-width: 1100px) {
+        flex: 5;
+      }
+      @media(max-width: 760px) {
+        flex: 3;
+      }
+      @media(max-width: 480px) {
+        flex: 1;
+      }
+    }
+  }
+
+  &_footer {
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    label {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .toggle {
+    flex: 1;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    p {
+      align-self: center;
+      color: #3e3e3e;
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+
+    label {
+      position: relative;
+      display: inline-block;
+      width: 4.8rem;
+      height: 3.4rem;
+
+      input[type="checkbox"] {
+        opacity: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 2.6rem;
+        width: 2.6rem;
+        left: .4rem;
+        bottom: .4rem;
+        background-color: white;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(1.5rem);
+      }
+    }
+  }
+
+  .select {
+    width: 45%;
+  }
+
+  .file {
+    flex: 1;
+    padding: 0;
+    border: none;
+    width: 20rem;
+  }
+
+  .file::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  .file::before {
+    content: 'Select photo';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: .3rem;
+    padding: .5rem .8rem;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+
+  .file:hover::before {
+    border-color: black;
+  }
+
+  .file:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+}
